@@ -15,9 +15,6 @@ class String
   end
 
   def count_sentences
-    str = self
-    str.sub!("...", ".")
-    str.sub!("!!", "!")
-    str.count("." "?" "!")
+    selt.split(/\.| \?| !/).delete_if{|w| w.size < 2}.size
   end
 end
